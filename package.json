@@ -1,0 +1,12 @@
+{
+  "name": "trab2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "yarn nodemon index.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
