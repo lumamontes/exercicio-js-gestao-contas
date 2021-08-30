@@ -1,5 +1,5 @@
-let taxa_cobranca_saque = 0.05
-let taxa_cobranca_deposito = 0.10
+let taxa_cobranca_saque = 0.05;
+let taxa_cobranca_deposito = 0.10;
 
 class Conta {
 
@@ -53,9 +53,9 @@ class ContaPoupanca extends Conta {
 
     gerarRendimento() {
         // esta operação corresponde a um acrescimo de 5% no saldo da conta e será executada mensalmente
-        console.log(`Saldo: ${this._saldo}`)
-        this._saldo += ((5 * this._saldo) / 100)
-        return console.log(`Rendimento ${this._saldo}`)
+        console.log(`Saldo: ${this._saldo}`);
+        this._saldo += ((5 * this._saldo) / 100);
+        return console.log(`Rendimento ${this._saldo}`);
     }
 
 }
@@ -71,7 +71,7 @@ class Funcionarios {
         this._salario = salario;
     }
     concederEmprestimo(valor_emprestimo, conta) {
-        console.log(`Saldo atual: ${conta._saldo}`)
+        console.log(`Saldo atual: ${conta._saldo}`);
         return console.log(`Saldo atual após empréstimo: ${valor_emprestimo + conta._saldo}`);
     }
 }
@@ -79,11 +79,11 @@ class Funcionarios {
 class Gerentes extends Funcionarios {
     aumentarLimiteContaCorrente(valor_limite, conta) {
         // executa a operação de aumento de limite de uma conta corrente
-        console.log(`Limite atual: ${conta._limite}`)
+        console.log(`Limite atual: ${conta._limite}`);
         return console.log(`Novo limite: ${conta._limite + valor_limite}`);
     }
 }
-const gerenteLuma = new Gerentes('lumix', '1', 400)
+const gerenteLuma = new Gerentes('lumix', '1', 400);
 // gerenteLuma.aumentarLimiteContaCorrente(200, ContaCorrente1);
 // gerenteLuma.concederEmprestimo(200, ContaCorrente1);
 
@@ -93,21 +93,21 @@ class Atendentes extends Funcionarios {
         //     verifica se há pendencias com o cadastro do cliente ( dados não informados ou incosistência a respeito do cliente)
         // console.log(cliente);
         if(cliente._numero < 0 || cliente._numero === '' ){
-            console.log(`Cadastro incompleto! Informe o numero da conta`)
+            console.log(`Cadastro incompleto! Informe o numero da conta`);
         }else if(cliente._cliente === ''){
-            console.log(`Cadastro incompleto! Informe o cliente`)
+            console.log(`Cadastro incompleto! Informe o cliente`);
         }else if(cliente._agencia === ''){
-            console.log(`Cadastro incompleto! Informe a agencia`)
+            console.log(`Cadastro incompleto! Informe a agencia`);
         }else if(cliente._saldo == '') {
-            console.log(`Cadastro incompleto! Informe o saldo da conta`)
+            console.log(`Cadastro incompleto! Informe o saldo da conta`);
         }else if(cliente._limite == ''){
-            console.log(`Cadastro incompleto! Informe o limite da conta`)
+            console.log(`Cadastro incompleto! Informe o limite da conta`);
         }else{
-        console.log('Cadastro completo')
+        console.log('Cadastro completo');
         }
     }
 }
 
-const atendenteLuma = new Atendentes('lumaa', '1', 400)
+const atendenteLuma = new Atendentes('lumaa', '1', 400);
 // atendenteLuma.verificaPendenciasCadastro(ContaCorrente1);
 
