@@ -23,8 +23,8 @@ class Conta {
 }
 
 class ContaCorrente extends Conta {
-    constructor(numero, cliente, saldo, agencia,limite, conta_especial) {
-        super(numero, cliente, saldo, agencia,limite);
+    constructor(numero, cliente, saldo, agencia, limite, conta_especial) {
+        super(numero, cliente, saldo, agencia, limite);
         this._conta_especial = conta_especial;
     }
     //conta especial reduz pela metade as taxas cobradas sob as operações bancárias 
@@ -40,13 +40,13 @@ class ContaCorrente extends Conta {
 
 }
 
-const ContaCorrente1 = new ContaCorrente(11111, 'luma montes', 1000, 12123 , 3000, true, null);
+const ContaCorrente1 = new ContaCorrente(11111, 'luma montes', 1000, 12123, 3000, true, null);
 
 
 class ContaPoupanca extends Conta {
 
     constructor(numero, cliente, saldo, agencia, limite, conta_especial, variacao) {
-        super(numero, cliente, saldo, agencia,limite, conta_especial);
+        super(numero, cliente, saldo, agencia, limite, conta_especial);
         //faz referência à categoria de investimento desta conta poupança
         this._variacao = variacao;
     }
@@ -60,7 +60,7 @@ class ContaPoupanca extends Conta {
 
 }
 
-const ContaPoupanca1 = new ContaPoupanca(11111, 'luma góes', 1000, 1234, 3000,false, 50);
+const ContaPoupanca1 = new ContaPoupanca(11111, 'luma góes', 1000, 1234, 3000, false, 50);
 // ContaPoupanca1.gerarRendimento();
 
 
@@ -92,18 +92,18 @@ class Atendentes extends Funcionarios {
     verificaPendenciasCadastro(cliente) {
         //     verifica se há pendencias com o cadastro do cliente ( dados não informados ou incosistência a respeito do cliente)
         // console.log(cliente);
-        if(cliente._numero < 0 || cliente._numero === '' ){
+        if (cliente._numero < 0 || cliente._numero === '') {
             console.log(`Cadastro incompleto! Informe o numero da conta`);
-        }else if(cliente._cliente === ''){
+        } else if (cliente._cliente === '') {
             console.log(`Cadastro incompleto! Informe o cliente`);
-        }else if(cliente._agencia === ''){
+        } else if (cliente._agencia === '') {
             console.log(`Cadastro incompleto! Informe a agencia`);
-        }else if(cliente._saldo == '') {
+        } else if (cliente._saldo == '') {
             console.log(`Cadastro incompleto! Informe o saldo da conta`);
-        }else if(cliente._limite == ''){
+        } else if (cliente._limite == '') {
             console.log(`Cadastro incompleto! Informe o limite da conta`);
-        }else{
-        console.log('Cadastro completo');
+        } else {
+            console.log('Cadastro completo');
         }
     }
 }
